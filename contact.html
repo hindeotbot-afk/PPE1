@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <nav id="nav" class="nav">
+        <p class="logo"><a href="index.html">Booki'<span>s</span></a></p>
+        <ul>
+            <li id="label" onclick="mobile()"><i class="fas fa-bars"></i></li>
+            <li><a href="index.html#Accueil">Accueil</a></li>
+            <li><a href="index.html#recipes">Nos recettes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="connexion.html" id="userLink">Connexion</a></li>
+            <li><a href="inscription.html" id="signupLink" class="subscribe-btn">S'inscrire</a></li>
+            <li id="logoutLi" style="display:none"><a href="#" id="logout">Déconnexion</a></li>
+            <li><a href="panier.html" class="cart-link">Panier 🛒<span id="cart-count" class="badge" style="display:none">0</span></a></li>
+            <li>
+                <button id="searchBtn" aria-label="Rechercher">🔍</button>
+                <input type="text" id="searchInput" placeholder="Rechercher..." style="display:none">
+            </li>
+        </ul>
+    </nav>
+
+    <main class="form-page">
+    <h1>Contactez-nous</h1>
+    <p class="form-intro">Une question, une commande spéciale ? Écrivez-nous, on répond vite.</p>
+    <form id="formContact" class="form-card">
+        <label>Nom  <input type="text" name="nom" required></label>
+        <label>E-mail * <input type="email" name="email" required></label>
+        <label>Message * <textarea name="message" rows="5" required></textarea></label>
+        <label class="check"><input type="checkbox" name="consent" required>
+            <span>J'accepte que mes données soient utilisées pour répondre à ma demande
+            (<a href="politique-de-confidentialite.html" target="_blank">en savoir plus</a>). *</span></label>
+        <p id="form-msg" class="form-msg" role="alert"></p>
+        <button type="submit" class="btn">Envoyer</button>
+    </form>
+</main>

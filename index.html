@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booki's</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <nav id="nav" class="nav">
+        <p class="logo"><a href="index.html">Booki'<span>s</span></a></p>
+        <ul>
+            <li id="label" onclick="mobile()"><i class="fas fa-bars"></i></li>
+            <li><a href="#Accueil" class="nav-link active">Accueil</a></li>
+            <li><a href="#recipes" class="nav-link">Nos recettes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="connexion.html" id="userLink">Connexion</a></li>
+            <li><a href="inscription.html" id="signupLink" class="subscribe-btn">S'inscrire</a></li>
+            <li id="logoutLi" style="display:none"><a href="#" id="logout">Déconnexion</a></li>
+            <li><a href="panier.html"class="cart-link">Panier 🛒<span id="cart-count" class="badge" style="display:none">0</span></a></li>
+            <li>
+                <button id="searchBtn"aria-label="Rechercher">🔍</button>
+                <input type="text" id="searchInput" placeholder="Rechercher..." style="display:none">
+            </li>
+        </ul>
+    </nav>
+
+    <header id="Accueil">
+        <div class="left">
+            <h1>Point chaud dans la grisaille du matin.</h1>
+            <p>Ébloui dès l'entrée, on recharge ta vie. Une pause, une phrase, un sourire et ça repart.</p>
+            <a href="inscription.html"><button>Bienvenue au club</button></a>
+        </div>
+        <div class="right">
+            <img src="img/muffin.jpg" alt="Muffin du café Booki's">
+        </div>
+    </header>
+
+    <section class="presentation">
+        <div class="right">
+            <h2>Booki's club</h2>
+            <h3>Des équipes formées pour un service de qualité</h3>
+            <p class="description">Ebloui des l entree, on recharge ta vie.
+                   Une pause, une phrase, un sourire et ca repart.
+                    Tout est la, rien de trop, on recharge
+                    tes batteries genereuse energie solaire,
+                      paradis vivant sur terre.
+                       On est tous habitues, au Club Cafe.</p>
+        </div>
+    </section>
+
+    <section id="recipes">
+        <p class="mini-title">Nos recettes</p>
+        <h2>Qui sont les plus populaires ?</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="img/Matcha Latte.png" alt="Matcha latte">
+                <h3>Matcha Latte</h3>
+                <p class="price">7,50 &euro;</p>
+                <button class="add-btn" onclick="addToCart('Matcha Latte', 7.50)">Ajouter au panier</button>
+            </div>
+            <div class="card">
+                <img src="img/Ube Latte.png" alt="Ube latte">
+                <h3>Ube Latte</h3>
+                <p class="price">5,30 &euro;</p>
+                <button class="add-btn" onclick="addToCart('Ube Latte', 5.30)">Ajouter au panier</button>
+            </div>
+            <div class="card">
+                <img src="img/Cookie.png" alt="Cookie">
+                <h3>Cookie</h3>
+                <p class="price">2,10 &euro;</p>
+                <button class="add-btn" onclick="addToCart('Cookie', 2.10)">Ajouter au panier</button>
+            </div>
+            <div class="card">
+                <img src="img/Muffin speculos.png" alt="Muffin au spéculos">
+                <h3>Muffin</h3>
+                <p class="price">3,30 &euro;</p>
+                <button class="add-btn" onclick="addToCart('Muffin', 3.30)">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <h2>Inscrivez-vous à notre newsletter</h2>
+        <form id="newsletter.html">
+            <input type="email" name="email" placeholder="Votre e-mail" required>
+            <button type="submit">S'abonner</button>
+        </form>
+        <label class="consent-line">
+        <input type="checkbox" name="consent" id="newsletterConsent" required form="formNewsletter"> 
+        J'accepte de recevoir la newsletter de Booki's. Désinscription possible à tout moment 
+        (<a href="politique-de-confidentialite.html">en savoir plus</a>).</label>
+    </section>
+
+    <footer>
+        <div class="column important">
+            <h3>Merci à vous !</h3>
+            <p>&copy; 2026 Booki's</p>
+            <p><a href="politique-de-confidentialite.html">Politique de confidentialité</a></p>
+            <p><a href="#" id="manageCookies">Gérer mes cookies</a></p>
+        </div>
+        <div class="column">
+            <h3>Nos services</h3>
+            <p>Café</p>
+            <p>Boutiques</p>
+            <p>Livraison</p>
+        </div>
+        <div class="column">
+            <h3>Contactez-nous</h3>
+            <p>contact@bookis.fr</p>
+        </div>
+        <div class="column">
+            <h3>Nos locaux</h3>
+            <p>Paris</p>
+            <p>Marseille</p>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" style="display:none" role="dialog" aria-label="Cookies">
+        <p>Booki's utilise un stockage local pour mesurer l'audience du site. Vous pouvez accepter ou refuser. <a href="politique-de-confidentialite.html">En savoir plus</a></p>
+        <button id="cookie-accept">Accepter</button>
+        <button id="cookie-refuse">Refuser</button>
+    </div>
+</body>
+</html>

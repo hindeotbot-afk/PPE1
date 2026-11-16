@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription – Booki's</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <nav id="nav" class="nav">
+        <p class="logo"><a href="index.html">Booki'<span>s</span></a></p>
+        <ul>
+            <li id="label" onclick="mobile()"><i class="fas fa-bars"></i></li>
+            <li><a href="index.html#Accueil">Accueil</a></li>
+            <li><a href="index.html#recipes">Nos recettes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="connexion.html" id="userLink">Connexion</a></li>
+            <li><a href="inscription.html" id="signupLink" class="subscribe-btn">S'inscrire</a></li>
+            <li id="logoutLi" style="display:none"><a href="#" id="logout">Déconnexion</a></li>
+            <li><a href="panier.html" class="cart-link">Panier 🛒<span id="cart-count" class="badge" style="display:none">0</span></a></li>
+            <li>
+                <button id="searchBtn" aria-label="Rechercher">🔍</button>
+                <input type="text" id="searchInput" placeholder="Rechercher..." style="display:none">
+            </li>
+        </ul>
+    </nav>
+
+    <main class="form-page">
+        <h1>Rejoindre le Booki's club</h1>
+        <p class="form-intro">Créez votre compte en une minute. Les champs marqués * sont obligatoires.</p>
+        <form id="formInscription" class="form-card">
+            <div class="row">
+                <label>Prénom  <input type="text" name="prenom" autocomplete="given-name" required></label>
+                <label>Nom  <input type="text" name="nom" autocomplete="family-name" required></label>
+            </div>
+            <label>E-mail * <input type="email" name="email" autocomplete="email" required></label>
+            <label>Adresse (livraison) * <input type="text" name="adresse" autocomplete="street-address" required></label>
+            <label>Téléphone * <input type="tel" name="telephone" autocomplete="tel" pattern="[0-9 +.]{10,16}" title="10 chiffres minimum" required></label>
+            <label>Mot de passe * (16 caractères minimum) <input type="password" name="mdp" minlength="8" autocomplete="new-password" required></label>
+            <label>Confirmer le mot de passe * <input type="password" name="mdp2" minlength="8" autocomplete="new-password" required></label>
+
+            <label class="check"><input type="checkbox" name="cgu" required>
+                <span>J'accepte les conditions d'utilisation et la <a href="politique-de-confidentialite.html" target="_blank">politique de confidentialité</a>. J'autorise Booki's à utiliser mes données pour gérer mon compte, mes commandes et leur livraison. *</span></label>
+            <label class="check"><input type="checkbox" name="newsletter">
+                <span>Je souhaite recevoir la newsletter et les offres de Booki's.</span></label>
+
+            <p class="small">Responsable du traitement : Booki's, contact@bookis.fr. Vous pouvez accéder à vos données, les corriger, les exporter ou supprimer votre compte à tout moment depuis la page « Mon compte ».</p>
+            <p id="form-msg" class="form-msg" role="alert"></p>
+            <button type="submit" class="btn">Créer mon compte</button>
+            <p class="alt">Déjà membre ? <a href="connexion.html">Se connecter</a></p>
+        </form>
+    </main>
+
+    
+
+    
